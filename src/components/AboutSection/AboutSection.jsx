@@ -20,7 +20,7 @@ function Letters({ text }) {
 
 export default function AboutSection() {
   return (
-    <section className="w-full py-16 md:py-24 px-4 sm:px-6 bg-white">
+    <section className="w-full py-16 md:py-24 px-4 sm:px-6 ">
       <div className="max-w-4xl mx-auto">
         <span className="text-orange-600 text-sm font-bold uppercase tracking-[0.2em] block mb-4">
           About me
