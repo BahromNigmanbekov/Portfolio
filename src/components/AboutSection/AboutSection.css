@@ -1,0 +1,16 @@
+.letter {
+  display: inline-block;
+  cursor: default;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .letter:hover {
+    color: #f97316; /* Orange-500 */
+    /* Silliq yonish uchun bir nechta shadow qatlami */
+    text-shadow: 
+      0 0 5px rgba(249, 115, 22, 0.6),
+      0 0 15px rgba(249, 115, 22, 0.4),
+      0 0 25px rgba(249, 115, 22, 0.2);
+  }
+}

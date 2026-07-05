@@ -1,42 +1,38 @@
 import './App.css';
-
 import Badge from './components/Badge/Badge';
-
 import Header from './components/header/Header';
-
+import ScrollWaveline from './components/ScrollWaveline/ScrollWaveline';
 import myPhoto from './assets/salom.jpg';
-
 import { Element } from 'react-scroll';
-
-
+import AboutSection from './components/AboutSection/AboutSection';
+import ProjectsSection from './components/ProjectsSection/ProjectsSection';
+import ContactSection from './components/ContactSection/ContactSection';
+import Footer from './components/footer/Footer';
 
 function App() {
-
   return (
+    <div className="relative w-full">
+      <ScrollWaveline seedA={80} seedB={11} strokeWidth={15} debug={true} />
 
-    <div className="w-full">
+      <div className="relative z-10">
+        <Header />
+        <Badge photoSrc={myPhoto} />
 
-      {/* Navbar doim ustda turadi */}
+        <Element name="about" className="w-full">
+          <AboutSection />
+        </Element>
 
-      <Header />
+        <Element name="projects" className="w-full">
+          <ProjectsSection />
+        </Element>
 
-
-          <Badge photoSrc={myPhoto} />
-
-      {/* Scroll qilinadigan bo'limlar */}
-
-      <Element name="about" className="h-screen w-full flex items-center justify-center">About me</Element>
-
-      <Element name="contact" className="h-screen w-full flex items-center justify-center">Contact us</Element>
-
-      <Element name="projects" className="h-screen w-full flex items-center justify-center">Projects</Element>
-
+        <Element name="contact" className="w-full">
+          <ContactSection />
+        </Element>
+        <Footer/>
+      </div>
     </div>
-
   );
-
 }
-
-
 
 export default App;
